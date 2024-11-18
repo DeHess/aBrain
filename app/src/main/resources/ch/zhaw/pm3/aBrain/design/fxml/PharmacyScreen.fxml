@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane fx:id="root" styleClass="root" stylesheets="@../css/light_theme.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ch.zhaw.pm3.aBrain.frontend.controller.PharmacyScreenController">
+   <center>
+      <AnchorPane>
+          <children>
+              <ScrollPane fx:id="scrollPane" fitToWidth="true" layoutX="35.0" layoutY="118.0" snapToPixel="false" styleClass="pharmacy__scroll-pane" stylesheets="@../css/light_theme.css" vbarPolicy="NEVER">
+                  <VBox fx:id="gridWrapper" styleClass="pharmacy__grid-wrapper" stylesheets="@../css/light_theme.css" />
+              </ScrollPane>
+              <TextField fx:id="searchField" layoutX="38.0" layoutY="35.0" onKeyTyped="#search" promptText="Suchen..." styleClass="pharmacy__search-field" stylesheets="@../css/light_theme.css" />
+          </children>
+      </AnchorPane>
+   </center>
+   <bottom>
+        <fx:include source="BottomBar.fxml"/>
+   </bottom>
+</BorderPane>

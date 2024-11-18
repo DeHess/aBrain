@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<GridPane fx:id="root" styleClass="root" stylesheets="@../css/light_theme.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ch.zhaw.pm3.aBrain.frontend.controller.med.MedAdminIntervalController">
+    <columnConstraints>
+        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints maxHeight="120.0" minHeight="10.0" prefHeight="100.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="120.0" minHeight="10.0" prefHeight="30.0" valignment="TOP" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" valignment="TOP" vgrow="SOMETIMES" />
+    </rowConstraints>
+    <children>
+        <GridPane styleClass="frame-header">
+            <columnConstraints>
+                <ColumnConstraints fillWidth="false" halignment="LEFT" hgrow="SOMETIMES" maxWidth="70.0" minWidth="10.0" prefWidth="70.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="225.0" minWidth="10.0" prefWidth="225.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="70.0" minWidth="10.0" prefWidth="70.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" valignment="TOP" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Label fx:id="screenTitle" styleClass="frame-title" text="Label" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.valignment="TOP" />
+                <Button mnemonicParsing="false" onAction="#returnTo" styleClass="return-button" text="Button" />
+            </children>
+            <padding>
+                <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+            </padding>
+        </GridPane>
+      <Label styleClass="frame-manual-text" text="Wie oft möchtest du an die Einnahme des Medikamentes erinnert werden?" GridPane.rowIndex="1" />
+      <VBox prefHeight="200.0" prefWidth="100.0" styleClass="med-data__detail-wrapper" GridPane.rowIndex="2">
+         <children>
+            <HBox onMouseClicked="#goToAdminTime" styleClass="framed-box">
+               <children>
+                  <VBox prefHeight="200.0" prefWidth="100.0" styleClass="medData__detail_vBox">
+                     <children>
+                        <Label styleClass="framed-box--title" text="Täglich" />
+                        <Label styleClass="framed-box--text" text="Tägliche Einnahme" />
+                     </children>
+                  </VBox>
+                  <ImageView pickOnBounds="true" preserveRatio="true" styleClass="arrow-icon--blue" />
+               </children>
+            </HBox>
+            <HBox onMouseClicked="#goToWeekdayInterval" styleClass="framed-box">
+               <children>
+                  <VBox prefHeight="200.0" prefWidth="100.0" styleClass="medData__detail_vBox">
+                     <children>
+                        <Label styleClass="framed-box--title" text="An Wochentagen" />
+                        <Label styleClass="framed-box--text" text="Einnahme an gewissen Wochentagen" />
+                     </children>
+                  </VBox>
+                  <ImageView pickOnBounds="true" preserveRatio="true" styleClass="arrow-icon--blue" />
+               </children>
+            </HBox>
+            <HBox onMouseClicked="#goToxDaysInterval" styleClass="framed-box">
+               <children>
+                  <VBox prefHeight="200.0" prefWidth="100.0" styleClass="medData__detail_vBox">
+                     <children>
+                        <Label styleClass="framed-box--title" text="Alle x Tage" />
+                        <Label styleClass="framed-box--text" text="Einnahme im Tages-Intervall" />
+                     </children>
+                  </VBox>
+                  <ImageView pickOnBounds="true" preserveRatio="true" styleClass="arrow-icon--blue" />
+               </children>
+            </HBox>
+            <HBox onMouseClicked="#goToxHoursInterval" styleClass="framed-box">
+               <children>
+                  <VBox prefHeight="200.0" prefWidth="100.0" styleClass="medData__detail_vBox">
+                     <children>
+                        <Label styleClass="framed-box--title" text="Alle x Stunden" />
+                        <Label styleClass="framed-box--text" text="Einnahme im Stunden-Intervall" />
+                     </children>
+                  </VBox>
+                  <ImageView pickOnBounds="true" preserveRatio="true" styleClass="arrow-icon--blue" />
+               </children>
+            </HBox>
+            <HBox onMouseClicked="#goToSingleEvent" styleClass="framed-box">
+               <children>
+                  <VBox prefHeight="200.0" prefWidth="100.0" styleClass="medData__detail_vBox">
+                     <children>
+                        <Label styleClass="framed-box--title" text="Einmal" />
+                        <Label styleClass="framed-box--text" text="Einnahme einer einmaligen Dosis" />
+                     </children>
+                  </VBox>
+                  <ImageView pickOnBounds="true" preserveRatio="true" styleClass="arrow-icon--blue" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+    </children>
+</GridPane>

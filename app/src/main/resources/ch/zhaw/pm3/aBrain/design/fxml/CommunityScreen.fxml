@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+
+  <BorderPane fx:id="root" styleClass="root" stylesheets="@../css/light_theme.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ch.zhaw.pm3.aBrain.frontend.controller.CommunityScreenController">
+   <center>
+          <VBox styleClass="journal__center-vbox" stylesheets="@../css/light_theme.css" BorderPane.alignment="CENTER">
+              <children>
+            <Label fx:id="articleSectionLabel" styleClass="community__section-title" text="Label" />
+                  <ScrollPane fx:id="articlesScrollPane" styleClass="community__article--scrollpane">
+                      <content>
+                          <VBox fx:id="articlesContainer" prefWidth="330.0" styleClass="community__container--article" />
+                      </content>
+                  </ScrollPane>
+            <Label fx:id="topicSectionLabel" styleClass="community__section-title" text="Label" />
+            <ScrollPane fx:id="topicsScrollPane" styleClass="community__topic--scrollpane">
+               <content>
+                        <HBox fx:id="topicsContainer" styleClass="community__container--topic" />
+               </content>
+            </ScrollPane>
+              </children>
+          </VBox>
+   </center>
+   <bottom>
+      <fx:include source="BottomBar.fxml"/>
+   </bottom>
+  </BorderPane>

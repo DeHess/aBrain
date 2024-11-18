@@ -1,0 +1,120 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[german]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{makeidx}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+
+%Hyperlinks
+\usepackage{hyperref}
+
+%Bilder
+\usepackage{float}
+\usepackage{wrapfig}
+
+%Kein Einzug am Anfang eines Abschnittes
+\setlength{\parindent}{0em}
+
+%Abkürzungsverzeichnis
+\usepackage{natbib}
+\usepackage{graphicx}
+\usepackage{acronym}
+
+%Glossar
+\usepackage[toc]{glossaries}
+\makeglossaries
+
+%Schriftart
+\usepackage{arev}
+\usepackage[T1]{fontenc}
+
+%Kopfzeile
+\fancyhead{}
+\pagestyle{fancy}
+\headheight = 2cm
+\fancyhead[R]{
+	\parbox{15mm}
+  	{
+  		\includegraphics[width=15mm]{rec/aBrain-Logo}
+  	}
+	\begin{tabular}[c]{l}
+  		{\Huge aBrain}
+	\end{tabular}
+}
+\renewcommand{\headrulewidth}{0pt}
+\textheight = 24cm
+
+%Fusszeile
+\fancyfoot[R]{}
+\fancyfoot[C]{\thepage}
+\fancyfoot[L]{}
+
+%Titelfarbe
+\usepackage{titlesec}
+\usepackage{color}
+
+%Titelfarbe
+\definecolor{aBrainBlue}{RGB}{63,78,101}
+\titleformat{\section}
+{\color{aBrainBlue}\normalfont\Large\bfseries}
+{\color{aBrainBlue}\thesection}{1em}{}
+
+%Titelblatt
+\title{
+	\Huge Technischer Bericht I\\
+	\vspace{3cm}
+	\includegraphics[width=5cm]{rec/aBrain-Logo}\\
+	\vspace{0.5cm}
+	\huge aBrain 
+	\vspace{8cm}
+}
+
+\author{Bärmel, Laura\\
+Hess, Nathan\\
+Jasari, Ardi\\
+Wildberger, Philemon\\
+Zimmermann, Lukas}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\newpage
+
+\tableofcontents
+
+\newpage
+
+\input{UseCaseModell}
+
+\input{ZusätzlicheAnforderungen}
+
+\input{Domänenmodell}
+
+\input{Softwarearchitektur}
+
+\input{DesignArtefakte}
+
+\input{Implementation}
+
+\input{Projektmanagement}
+
+\input{Glossar}
+
+\input{Abkürzungsverzeichnis}
+
+\listoffigures
+
+\newpage
+\newpage
+\input{HowToLatex}
+
+\end{document}

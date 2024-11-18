@@ -1,0 +1,22 @@
+\babel@toc {german}{}\relax 
+\contentsline {section}{\numberline {1}Use-Case-Modell}{3}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Pdf-Generieren}{3}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Nebenwirkung ins Journal eingeben }{4}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}Medikament eingeben}{4}{subsection.1.3}%
+\contentsline {subsection}{\numberline {1.4}Tägliche Stimmung eingeben }{5}{subsection.1.4}%
+\contentsline {subsection}{\numberline {1.5} Wochenziel eingeben }{6}{subsection.1.5}%
+\contentsline {section}{\numberline {2}Zusätzliche Anforderungen}{6}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Schlichtes GUI-Design}{7}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Verbindungsaufbau zur Datenbank}{7}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Server Standort}{7}{subsection.2.3}%
+\contentsline {section}{\numberline {3}Domänenmodell}{7}{section.3}%
+\contentsline {section}{\numberline {4}Softwarearchitektur}{7}{section.4}%
+\contentsline {section}{\numberline {5}Design-Artefakte}{7}{section.5}%
+\contentsline {section}{\numberline {6}Implementation}{8}{section.6}%
+\contentsline {section}{\numberline {7}Projektmanagement}{8}{section.7}%
+\contentsline {section}{Glossar}{8}{section*.2}%
+\contentsline {section}{\numberline {8}HowToLatex}{9}{section.8}%
+\contentsline {subsection}{\numberline {8.1}Aufzählung}{9}{subsection.8.1}%
+\contentsline {subsection}{\numberline {8.2}Formel}{9}{subsection.8.2}%
+\contentsline {subsection}{\numberline {8.3}Tabelle}{9}{subsection.8.3}%
+\contentsline {subsection}{\numberline {8.4}Bilder}{9}{subsection.8.4}%

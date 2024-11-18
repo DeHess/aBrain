@@ -1,0 +1,67 @@
+\section{HowToLatex}
+
+Einige Beispiele wie Dinge in Latex erreicht werden...
+
+
+\subsection{Aufzählung}
+\begin{itemize}
+	\item Erstes Element
+	\item Zweites Element
+\end{itemize}
+
+Oder mit Zahlen...
+
+\begin{enumerate}
+	\item Erstes Element
+	\item Zweites Element
+\end{enumerate}
+
+\subsection{Formel}
+Formel mit Verzeichnis:\\
+\begin{align}
+    E = m \cdot c^2
+\end{align}
+\begin{align}
+	E = m \frac{4}{7} c^2
+\end{align}
+
+Es geht aber auch im Text. Eine Formel wäre $ E=m\cdot c^2 $ und ist sehr berühmt.
+
+\subsection{Tabelle}
+
+\begin{tabular}{|l|c|r|} \hline
+Linksbündig & Center & Rechtsbündig \\ \hline 
+l & c & r \\ \hline 
+\end{tabular}\\
+
+Etwas komplizierter und zentriert:
+\begin{center}
+\begin{tabular}{|c|l|r|r|} \hline
+	\textbf{Klasse} & \textbf{Adressbereich} & \textbf{Anzahl Netze} & \textbf{Interfaces pro Netz} \\ \hline
+	A & 1.0.0.0 - 127.255.255.255 & 127 & 16‘777‘214 \\ \hline
+	B & 128.0.0.0 – 191.255.255.255 & 16‘384 & 65‘534 \\ \hline
+	C & 192.0.0.0 – 223.255.255.255 & 2‘097‘152 & 254 \\ \hline
+	D & 224.0.0.0 – 239.255.255.555 & \multicolumn{2}{|c|}{Multicast Adressen} \\ \hline
+	E & 240.0.0.0 – 255.255.255.255 & \multicolumn{2}{|c|}{Reserviert für zukünftige Nutzung} \\ \hline
+\end{tabular}
+\end{center}
+
+\subsection{Bilder}
+
+Einfachs Bild mit fester Breite:\\
+\includegraphics[width=3cm]{rec/aBrain-Logo}
+\vspace{10mm}
+
+Einfaches Bild mit relativer Breite:\\
+\includegraphics[width=0.3\textwidth]{rec/aBrain-Logo}
+\vspace{1cm}
+
+\begin{minipage}{0.7\textwidth}
+ARP (Address Resolution Protocol) wird benutzt, falls ein Client eine Protokoll-Adresse in eine Hardware-Adresse umsetzten muss und noch keinen entsprechenden Eintrag in der ARP-Tabelle hat. Dieser Client schickt dann einen ARP-Request an alle Teilnehmer mittels Broadcast. Falls ein entsprechender Client sich angesprochen fühlt, schickt dieser eine ARP-Replay Paket zurück.
+\end{minipage}
+\begin{minipage}{0.3\textwidth}
+	\centering
+	\includegraphics[width=0.5\textwidth]{rec/aBrain-Logo}
+\end{minipage}
+
+

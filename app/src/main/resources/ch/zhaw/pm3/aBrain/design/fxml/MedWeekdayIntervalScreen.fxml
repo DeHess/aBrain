@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane id="med-data__root-grid" fx:id="root" alignment="TOP_RIGHT" styleClass="root" stylesheets="@../css/light_theme.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ch.zhaw.pm3.aBrain.frontend.controller.med.MedWeekdayIntervalController">
+   <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints minHeight="100.0" />
+      <RowConstraints fillHeight="false" valignment="CENTER" vgrow="NEVER" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="200.0" minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+   </rowConstraints>
+   <children>
+      <GridPane styleClass="frame-header">
+         <columnConstraints>
+            <ColumnConstraints fillWidth="false" halignment="CENTER" hgrow="SOMETIMES" maxWidth="70.0" minWidth="10.0" prefWidth="70.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="225.0" minWidth="10.0" prefWidth="225.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="70.0" minWidth="10.0" prefWidth="70.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" valignment="TOP" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label fx:id="screenTitle" styleClass="frame-title" text="Label" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.valignment="TOP" />
+            <Button mnemonicParsing="false" onAction="#returnTo" styleClass="return-button" text="Button" />
+         </children>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+      </GridPane>
+      <Pane styleClass="frame-manual-wrapper" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+         <children>
+            <Label contentDisplay="TEXT_ONLY" graphicTextGap="0.0" styleClass="frame-manual-text" text="In welchem Intervall möchtest du das Medikament einnehmen?" />
+         </children>
+         <GridPane.margin>
+            <Insets />
+         </GridPane.margin>
+      </Pane>
+      <VBox fx:id="weekdayWrapper" spacing="10.0" styleClass="med-data__content-wrapper-vbox" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="TOP">
+         <children>
+            <CheckBox fx:id="Monday" mnemonicParsing="false" text="Montag" />
+            <CheckBox fx:id="Tuesday" mnemonicParsing="false" text="Dienstag" />
+            <CheckBox fx:id="Wednesday" mnemonicParsing="false" text="Mittwoch" />
+            <CheckBox fx:id="Thursday" mnemonicParsing="false" text="Donnerstag" />
+            <CheckBox fx:id="Friday" mnemonicParsing="false" text="Freitag" />
+            <CheckBox fx:id="Saturday" mnemonicParsing="false" text="Samstag" />
+            <CheckBox fx:id="Sunday" mnemonicParsing="false" text="Sonntag" />
+         </children>
+      </VBox>
+      <VBox alignment="CENTER" fillWidth="false" styleClass="med-data__button-combo-wrapper" GridPane.rowIndex="3">
+         <children>
+            <Button mnemonicParsing="false" onAction="#next" styleClass="button-box" text="Weiter" />
+         </children>
+         <GridPane.margin>
+            <Insets />
+         </GridPane.margin>
+         <padding>
+            <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+         </padding>
+      </VBox>
+   </children>
+   <opaqueInsets>
+      <Insets left="30.0" right="30.0" />
+   </opaqueInsets>
+</GridPane>

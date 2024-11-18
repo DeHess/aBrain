@@ -1,0 +1,56 @@
+\glsdefs@newdocentry{Computer}%
+{%
+name={Computer},%
+sort={Computer},%
+type={main},%
+first={Computer},%
+firstplural={Computers},%
+text={Computer},%
+plural={Computers},%
+description={ist eine programmierbare Maschine, die Eingaben empfängt, verarbeitet und in einer nützlichen Art wieder ausgiebt},%
+descriptionplural={ist eine programmierbare Maschine, die Eingaben empfängt, verarbeitet und in einer nützlichen Art wieder ausgiebt},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{Domänenmodel}%
+{%
+name={Domänenmodel},%
+sort={Domänenmodel},%
+type={main},%
+first={Domänenmodel},%
+firstplural={Domänenmodels},%
+text={Domänenmodel},%
+plural={Domänenmodels},%
+description={ist ein vereinfachtes \ac {UML} Klassendiagramm. Es zeigt fachliche Begriffe mit ihren Attributen und setzt diese Begriffe zueinander in Beziehung},%
+descriptionplural={ist ein vereinfachtes \ac {UML} Klassendiagramm. Es zeigt fachliche Begriffe mit ihren Attributen und setzt diese Begriffe zueinander in Beziehung},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+

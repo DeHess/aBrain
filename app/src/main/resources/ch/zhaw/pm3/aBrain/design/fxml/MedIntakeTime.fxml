@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+
+<GridPane fx:id="root" styleClass="root" stylesheets="@../css/light_theme.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ch.zhaw.pm3.aBrain.frontend.controller.med.MedIntakeTimeController">
+   <columnConstraints>
+      <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints maxHeight="120.0" minHeight="120.0" prefHeight="120.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="60.0" minHeight="60.0" prefHeight="60.0" vgrow="SOMETIMES" />
+      <RowConstraints vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="125.0" minHeight="125.0" prefHeight="125.0" vgrow="SOMETIMES" />
+   </rowConstraints>
+   <children>
+      <Button fx:id="btnNext" mnemonicParsing="false" onAction="#next" styleClass="button-box" stylesheets="@../css/light_theme.css" text="Weiter" GridPane.rowIndex="3">
+         <graphic>
+            <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true" translateX="131.0">
+               <image>
+                  <Image url="@../img_elements/button/ArrowRight.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <GridPane>
+        <columnConstraints>
+          <ColumnConstraints halignment="CENTER" hgrow="NEVER" maxWidth="100.0" minWidth="100.0" prefWidth="100.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="100.0" minWidth="100.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button mnemonicParsing="false" styleClass="return-button" text="Button" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="frame-title" text="Medikament hinzufügen" wrappingWidth="179.5226287841797" GridPane.columnIndex="1" />
+         </children>
+      </GridPane>
+      <Label prefHeight="23.0" prefWidth="405.0" styleClass="frame-manual-text" text="Einnahmezeit festlegen" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets left="30.0" />
+         </GridPane.margin>
+      </Label>
+      <VBox prefHeight="200.0" prefWidth="100.0" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+         <children>
+            <ScrollPane fx:id="sbTimes" hbarPolicy="NEVER" minHeight="473.0" prefHeight="473.0" prefWidth="332.0" styleClass="intakeTime__scroll-pane">
+               <content>
+                  <VBox fx:id="overviewContainer" spacing="10.0" />
+               </content>
+               <VBox.margin>
+                  <Insets left="30.0" right="30.0" />
+               </VBox.margin>
+            </ScrollPane>
+            <Button fx:id="btnAddTime" mnemonicParsing="false" onAction="#btnAddTimeClicked" styleClass="intakeTimeButton" text="+ Weitere Zeit hinzugfügen">
+               <VBox.margin>
+                  <Insets left="45.0" right="45.0" top="20.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+   </children>
+</GridPane>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<GridPane fx:id="root" styleClass="root" stylesheets="@../css/light_theme.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ch.zhaw.pm3.aBrain.frontend.controller.med.MedStartIntervalController">
+    <columnConstraints>
+        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints maxHeight="120.0" minHeight="10.0" prefHeight="100.0" vgrow="SOMETIMES" />
+        <RowConstraints valignment="TOP" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="150.0" minHeight="150.0" prefHeight="150.0" valignment="CENTER" vgrow="SOMETIMES" />
+    </rowConstraints>
+    <children>
+        <GridPane styleClass="frame-header">
+            <columnConstraints>
+                <ColumnConstraints fillWidth="false" halignment="CENTER" hgrow="SOMETIMES" maxWidth="100.0" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="225.0" minWidth="10.0" prefWidth="225.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="100.0" minWidth="10.0" prefWidth="100.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints valignment="CENTER" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Label fx:id="screenTitle" styleClass="frame-title" text="Label" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.valignment="TOP" />
+                <Button mnemonicParsing="false" onAction="#returnTo" styleClass="return-button" text="Button" />
+            </children>
+            <padding>
+                <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+            </padding>
+        </GridPane>
+      <VBox prefHeight="200.0" prefWidth="120.0" spacing="20.0" GridPane.rowIndex="1">
+         <children>
+            <Label styleClass="frame-manual-text" text="Bis wann soll die Behandung gehen?" />
+            <VBox prefHeight="95.0" prefWidth="360.0">
+               <children>
+                  <Label styleClass="input-field-label" text="Startdatum">
+                     <padding>
+                        <Insets bottom="10.0" />
+                     </padding></Label>
+                  <HBox prefHeight="100.0" prefWidth="200.0" styleClass="framed-box">
+                     <children>
+                        <DatePicker fx:id="dpStart" showWeekNumbers="true" styleClass="datePicker">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </DatePicker>
+                     </children>
+                     <opaqueInsets>
+                        <Insets left="20.0" right="22.0" />
+                     </opaqueInsets>
+                  </HBox>
+               </children>
+            </VBox>
+            <CheckBox fx:id="cbHasEndDate" mnemonicParsing="false" onAction="#hasEndDateChanged" text=" Bis Enddatum">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin></CheckBox>
+            <VBox fx:id="endDateContainer" prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Label styleClass="input-field-label" text="Enddatum">
+                     <padding>
+                        <Insets bottom="10.0" />
+                     </padding></Label>
+                  <HBox prefHeight="100.0" prefWidth="200.0" styleClass="framed-box">
+                     <children>
+                        <DatePicker fx:id="dpEnd" onAction="#datePickerEndDateChanged" showWeekNumbers="true" styleClass="datePicker">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </DatePicker>
+                     </children>
+                     <opaqueInsets>
+                        <Insets left="20.0" right="22.0" />
+                     </opaqueInsets>
+                  </HBox>
+                  <Label fx:id="lblErrorMessage" text="Enddatum muss nach dem Startdatum sein" textFill="RED">
+                     <font>
+                        <Font name="Arial" size="15.0" />
+                     </font>
+                     <padding>
+                        <Insets top="10.0" />
+                     </padding>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
+            </VBox>
+         </children>
+         <padding>
+            <Insets left="45.0" />
+         </padding>
+      </VBox>
+      <Button fx:id="btnNext" mnemonicParsing="false" onAction="#next" styleClass="button-box" text="Weiter" GridPane.rowIndex="2" />
+    </children>
+</GridPane>
